@@ -4,7 +4,7 @@ metadata:
   name: istioapp
   labels:
     app: istioapp
-    version: v1
+    version: v2
 spec:
   replicas: 1
   selector:
