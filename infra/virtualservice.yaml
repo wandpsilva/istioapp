@@ -6,13 +6,13 @@ spec:
   hosts:
     - istioapp.default.svc.cluster.local
   http:
-  - route:
-    - destination:
-        app: istioapp
-        subset: v1
-      weight: 100
-    mirror:
-      host: istioapp.default.svc.cluster.local
-      subset: v2
-    mirrorPercentage:
-      value: 100
+    - route:
+        - destination:
+            host: istioapp.default.svc.cluster.local
+            subset: v1
+          weight: 100
+      mirror:
+        host: istioapp.default.svc.cluster.local
+        subset: v2
+      mirrorPercentage:
+        value: 100
